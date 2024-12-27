@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:contentDescription="@string/close"
+        android:src="@drawable/baseline_close_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#9e9e9e" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="208dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="76dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/add_expense"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/currencySymbol"
+        android:layout_width="33dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="22dp"
+        android:text="$"
+        android:textColor="#9e9e9e"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/amountInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/amountInput"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="#616161"
+        android:hint="@string/amount"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9e9e9e"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/currencySymbol"
+        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+
+    <EditText
+        android:id="@+id/expenseNameInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#616161"
+        android:hint="@string/expense_name"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9e9e9e"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/expenseDescriptionInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountInput"
+        tools:ignore="Autofill,TextFields,VisualLintTextFieldSize" />
+
+    <EditText
+        android:id="@+id/expenseDescriptionInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#616161"
+        android:hint="@string/description"
+        android:importantForAutofill="no"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9e9e9e"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenseNameInput"
+        tools:ignore="TextFields,VisualLintTextFieldSize" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="308dp"
+        android:backgroundTint="#388E3C"
+        android:padding="10dp"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenseDescriptionInput"
+        tools:ignore="VisualLintButtonSize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
